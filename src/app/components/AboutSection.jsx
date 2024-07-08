@@ -1,8 +1,6 @@
 // @flow strict
 
-
 import Image from "next/image";
-import { images } from "../../../next.config";
 
 
 function AboutSection() {
@@ -20,14 +18,13 @@ function AboutSection() {
             Who I am?
           </p>
           <p className="text-gray-200 text-sm lg:text-lg">
-          I am a highly motivated and adaptable professional with a strong educational background in accounting and hands-on experience in software development. 
-          I am eager to integrate my expertise in accounting, web, and app development, alongside effective communication, to drive innovation and enhance operational efficiency within your organization. My commitment to continuous learning and collaboration in diverse teams positions me as a valuable asset, ready to support your company's objectives and contribute to its success. I aspire to leverage my accounting skills and computer science expertise to deliver pioneering solutions, catalyze efficiency, and drive growth. I am excited to join a forward-thinking organization, where I can apply my development and project management capabilities to optimize operational effectiveness and fuel the achievement of strategic goals and innovation initiatives.
-
+            I am a highly motivated and adaptable professional with a strong educational background in accounting and hands-on experience in software development. 
+            I am eager to integrate my expertise in accounting, web, and app development, alongside effective communication, to drive innovation and enhance operational efficiency within your organization. My commitment to continuous learning and collaboration in diverse teams positions me as a valuable asset, ready to support your company &apos;s objectives and contribute to its success. I aspire to leverage my accounting skills and computer science expertise to deliver pioneering solutions, catalyze efficiency, and drive growth. I am excited to join a forward-thinking organization, where I can apply my development and project management capabilities to optimize operational effectiveness and fuel the achievement of strategic goals and innovation initiatives.
           </p>
         </div>
         <div className="flex justify-center order-1 lg:order-2">
           <Image
-            src= "/images/me.jpg"
+            src="/images/me.jpg"
             width={280}
             height={280}
             alt="VMI"
