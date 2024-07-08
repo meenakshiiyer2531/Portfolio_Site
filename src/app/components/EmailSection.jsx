@@ -4,6 +4,7 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import MainButton from "./MainButton";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -56,13 +57,13 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
-            <Image src={GithubIcon} alt="Github Icon" />
-          </Link>
-          <Link href="linkedin.com">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
-          </Link>
-        </div>
+      <a href="https://github.com/meenakshiiyer2531" target="_blank" rel="noopener noreferrer">
+        <Image src={GithubIcon} alt="Github Icon" width={40} height={40} />
+      </a>
+      <a href="https://www.linkedin.com/in/v-meenakshi-iyer-23505722a/" target="_blank" rel="noopener noreferrer">
+        <Image src={LinkedinIcon} alt="Linkedin Icon" width={40} height={40} />
+      </a>
+    </div>
       </div>
       <div>
         {emailSubmitted ? (
@@ -84,7 +85,7 @@ const EmailSection = () => {
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
+                placeholder="vmi@gmail.com"
               />
             </div>
             <div className="mb-6">
@@ -117,12 +118,10 @@ const EmailSection = () => {
                 placeholder="Let's talk about..."
               />
             </div>
-            <button
-              type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
-            >
-              Send Message
-            </button>
+            <MainButton type="submit">
+             Send Message
+            </MainButton>
+
           </form>
         )}
       </div>

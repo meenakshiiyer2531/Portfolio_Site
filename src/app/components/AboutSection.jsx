@@ -1,98 +1,41 @@
-"use client";
-import React, { useTransition, useState } from "react";
+// @flow strict
+
+
 import Image from "next/image";
-import TabButton from "./TabButton";
+import { images } from "../../../next.config";
 
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
-      </ul>
-    ),
-  },
-];
 
-const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
-
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
-
+function AboutSection() {
   return (
-    <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+    <div id="about" className="my-12 lg:my-16 relative">
+      <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
+        <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
+          ABOUT ME
+        </span>
+        <span className="h-36 w-[2px] bg-[#1a1443]"></span>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <div className="order-2 lg:order-1">
+          <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
+            Who I am?
           </p>
-          <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              {" "}
-              Certifications{" "}
-            </TabButton>
-          </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
-          </div>
+          <p className="text-gray-200 text-sm lg:text-lg">
+          I am a highly motivated and adaptable professional with a strong educational background in accounting and hands-on experience in software development. 
+          I am eager to integrate my expertise in accounting, web, and app development, alongside effective communication, to drive innovation and enhance operational efficiency within your organization. My commitment to continuous learning and collaboration in diverse teams positions me as a valuable asset, ready to support your company's objectives and contribute to its success. I aspire to leverage my accounting skills and computer science expertise to deliver pioneering solutions, catalyze efficiency, and drive growth. I am excited to join a forward-thinking organization, where I can apply my development and project management capabilities to optimize operational effectiveness and fuel the achievement of strategic goals and innovation initiatives.
+
+          </p>
+        </div>
+        <div className="flex justify-center order-1 lg:order-2">
+          <Image
+            src= "/images/me.jpg"
+            width={280}
+            height={280}
+            alt="VMI"
+            className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
+          />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

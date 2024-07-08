@@ -4,33 +4,43 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import Image from "next/image";
 
 const navLinks = [
   {
     title: "About",
-    path: "#about",
+    path: "/#about", // Change the path to match the ID of the section you want to scroll to
+  },
+  {
+    title: "Skills",
+    path: "/#skills",
+  },
+  {
+    title: "Experience",
+    path: "/#experience",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "/#projects",
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "/#contact",
   },
 ];
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
+  const handleNavLinkClick = () => {
+    setNavbarOpen(false); // Close the navbar when a link is clicked
+  };
+
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
-        >
-          LOGO
+        <Link href={"/"} className="text-2xl md:text-5xl text-white font-semibold">
+          <Image src="/images/logo.png" alt="Logo" width={80} height={80} />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -53,7 +63,7 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <NavLink href={link.path} title={link.title} onClick={handleNavLinkClick} />
               </li>
             ))}
           </ul>
