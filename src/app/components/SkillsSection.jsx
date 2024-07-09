@@ -22,12 +22,20 @@ const skillsData = [
   'Firebase',
   'MaterialUI',
   'Nginx',
-  'Strapi'
+  'Strapi',
+  'c',
+  'dart',
+  'flutter',
+  'Kotlin',
+  'Cplusplus',
+  'Java',
+  'Python',
+  'svelte'
 ];
 
 // Function to get image paths for skills
 const skillsImage = (skill) => {
-  return `/images/skills/${skill}.svg`;
+  return `/images/skills/${skill}.png`;
 };
 
 function SkillsSection() {
