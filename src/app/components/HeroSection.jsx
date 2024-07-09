@@ -46,7 +46,7 @@ const HeroSection = () => {
           
           {/* Buttons with Margin */}
           <div className="space-y-5 mt-6"> {/* Add space between the buttons */}
-            <MagicButton title="Hire Me" href="/#contact" />
+            <MagicButton title="Contact Me" href="/#contact" />
             <MagicButton title="CV and Resume" href="https://drive.google.com/drive/folders/1q3JnwgZFGCQeJKjvWwt2cq_ab8yDtHwd?usp=sharing" target="_blank" rel="noopener noreferrer" />
           </div>
         </motion.div>
