@@ -35,6 +35,6 @@
     <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/v-meenakshi-iyer-23505722a/">V Meenakshi Iyer</a></li>
     <li><strong>GitHub:</strong> <a href="https://github.com/meenakshiiyer2531">meenakshiiyer2531</a></li>
     <li><strong>UiPath Community Forum:</strong> <a href="https://forum.uipath.com/u/v_meenakshi_iyer/">V Meenakshi Iyer</a></li>
-    <li><strong>Personal Website:</strong> <a href="https://v-meenakshi-iyer.vercel.app/">v-meenakshi-iyer.vercel.app</a></li>
+    <li><strong>Personal Website:</strong> <a href="https://vmeenakshiiyer.vercel.app/">vmeenakshiiyer.vercel.app</a></li>
   </ul>
 </div>
