@@ -34,7 +34,8 @@ const skillsData = [
   'Django',
   'SQLite',
   'Vitejs',
-  'Canva'
+  'Canva',
+  'MySQL'
 ];
 
 // Function to get image paths for skills

@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+
+import WhatsappIcon from "../../../public/whatsapp-icon.svg"; 
 import Link from "next/link";
 import Image from "next/image";
 import MainButton from "./MainButton";
@@ -58,13 +60,17 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <a href="https://github.com/meenakshiiyer2531" target="_blank" rel="noopener noreferrer">
-            <Image src={GithubIcon} alt="Github Icon" width={40} height={40} />
-          </a>
-          <a href="https://www.linkedin.com/in/v-meenakshi-iyer-23505722a/" target="_blank" rel="noopener noreferrer">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" width={40} height={40} />
-          </a>
-        </div>
+      <a href="https://github.com/meenakshiiyer2531" target="_blank" rel="noopener noreferrer">
+        <Image src={GithubIcon} alt="Github Icon" width={40} height={40} />
+      </a>
+      <a href="https://www.linkedin.com/in/v-meenakshi-iyer-23505722a/" target="_blank" rel="noopener noreferrer">
+        <Image src={LinkedinIcon} alt="Linkedin Icon" width={40} height={40} />
+      </a>
+      
+      <a href="https://wa.me/+919752955111" target="_blank" rel="noopener noreferrer">
+        <Image src={WhatsappIcon} alt="WhatsApp Icon" width={40} height={40} />
+      </a>
+    </div>
       </div>
       <div>
         {emailSubmitted ? (
