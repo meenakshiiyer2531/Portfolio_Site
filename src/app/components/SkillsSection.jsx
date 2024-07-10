@@ -23,14 +23,18 @@ const skillsData = [
   'MaterialUI',
   'Nginx',
   'Strapi',
-  'c',
-  'dart',
-  'flutter',
+  'C',
+  'Dart',
+  'Flutter',
   'Kotlin',
   'Cplusplus',
   'Java',
   'Python',
-  'svelte'
+  'Svelte',
+  'Django',
+  'SQLite',
+  'Vitejs',
+  'Canva'
 ];
 
 // Function to get image paths for skills
@@ -63,7 +67,7 @@ function SkillsSection() {
         >
           {skillsData.map((skill, id) => {
             const imagePath = skillsImage(skill);
-            console.log(`Image path for ${skill}: ${imagePath}`); // Debugging line
+          
             return (
               <div
                 className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
