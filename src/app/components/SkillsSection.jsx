@@ -10,7 +10,7 @@ const skillsData = [
   'React',
   'NextJS',
   'Tailwind',
-  'MongoDB',
+  'mongoDB',
   'MySQL',
   'PostgreSQL',
   'Git',
