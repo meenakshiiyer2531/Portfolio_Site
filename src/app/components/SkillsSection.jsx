@@ -35,7 +35,7 @@ const skillsData = [
 
 // Function to get image paths for skills
 const skillsImage = (skill) => {
-  return `/images/skills/${skill}.png`;
+  return `/images/skills/${skill}.svg`;
 };
 
 function SkillsSection() {
