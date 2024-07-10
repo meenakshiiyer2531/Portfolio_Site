@@ -37,6 +37,8 @@ const EmailSection = () => {
     if (response.status === 200) {
       console.log("Message sent.");
       setEmailSubmitted(true);
+    } else {
+      console.error("Failed to send message.");
     }
   };
 
@@ -51,19 +53,18 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          {" "}
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-      <a href="https://github.com/meenakshiiyer2531" target="_blank" rel="noopener noreferrer">
-        <Image src={GithubIcon} alt="Github Icon" width={40} height={40} />
-      </a>
-      <a href="https://www.linkedin.com/in/v-meenakshi-iyer-23505722a/" target="_blank" rel="noopener noreferrer">
-        <Image src={LinkedinIcon} alt="Linkedin Icon" width={40} height={40} />
-      </a>
-    </div>
+          <a href="https://github.com/meenakshiiyer2531" target="_blank" rel="noopener noreferrer">
+            <Image src={GithubIcon} alt="Github Icon" width={40} height={40} />
+          </a>
+          <a href="https://www.linkedin.com/in/v-meenakshi-iyer-23505722a/" target="_blank" rel="noopener noreferrer">
+            <Image src={LinkedinIcon} alt="Linkedin Icon" width={40} height={40} />
+          </a>
+        </div>
       </div>
       <div>
         {emailSubmitted ? (
@@ -119,9 +120,8 @@ const EmailSection = () => {
               />
             </div>
             <MainButton type="submit">
-             Send Message
+              Send Message
             </MainButton>
-
           </form>
         )}
       </div>
